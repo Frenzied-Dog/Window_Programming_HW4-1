@@ -14,32 +14,32 @@ namespace hw4_1_10_13 {
 
         private void UnlockBtn_Click(object sender, EventArgs e) {
             if (password == guess) {
-                Label0.Text = "¹ï"; Label1.Text = "¹ï";
-                Label2.Text = "¹ï"; Label3.Text = "¹ï";
-                MessageBox.Show("¸ÑÂê¦¨¥\!", "¦¨¥\", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Label0.Text = "å°"; Label1.Text = "å°";
+                Label2.Text = "å°"; Label3.Text = "å°";
+                MessageBox.Show("è§£é–æˆåŠŸ!", "æˆåŠŸ", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             } else {
                 int tmp_p = password;
                 int tmp_g = guess;
                 int n = 0;
 
-                Label3.Text = (tmp_p % 10 == tmp_g % 10) ? "¹ï" : "¿ù";
+                Label3.Text = (tmp_p % 10 == tmp_g % 10) ? "å°" : "éŒ¯";
                 n += (tmp_p % 10 == tmp_g % 10) ? 1 : 0;
                 tmp_p /= 10; tmp_g /= 10;
 
-                Label2.Text = (tmp_p % 10 == tmp_g % 10) ? "¹ï" : "¿ù";
+                Label2.Text = (tmp_p % 10 == tmp_g % 10) ? "å°" : "éŒ¯";
                 n += (tmp_p % 10 == tmp_g % 10) ? 1 : 0;
                 tmp_p /= 10; tmp_g /= 10;
 
-                Label1.Text = (tmp_p % 10 == tmp_g % 10) ? "¹ï" : "¿ù";
+                Label1.Text = (tmp_p % 10 == tmp_g % 10) ? "å°" : "éŒ¯";
                 n += (tmp_p % 10 == tmp_g % 10) ? 1 : 0;
                 tmp_p /= 10; tmp_g /= 10;
 
-                Label0.Text = (tmp_p % 10 == tmp_g % 10) ? "¹ï" : "¿ù";
+                Label0.Text = (tmp_p % 10 == tmp_g % 10) ? "å°" : "éŒ¯";
                 n += (tmp_p % 10 == tmp_g % 10) ? 1 : 0;
 
-                DialogResult r = MessageBox.Show($"²q¹ï{n}­Ó¦ì¸m", "¥¢±Ñ", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                DialogResult r = MessageBox.Show($"çŒœå°{n}å€‹ä½ç½®", "å¤±æ•—", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 if (r == DialogResult.Cancel)
-                    MessageBox.Show($"µª®×¬O{password}", "", MessageBoxButtons.OK);
+                    MessageBox.Show($"ç­”æ¡ˆæ˜¯{password}", "", MessageBoxButtons.OK);
             }
         }
 
